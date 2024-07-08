@@ -21,6 +21,9 @@ Este é o backend do aplicativo Books App, desenvolvido com Laravel 11. Ele forn
 4. Execute as migrações do banco de dados:
     php artisan migrate
 
+5. Execute os seeders para popular o banco de dados com dados de teste:
+    php artisan db:seed
+
 ## Como rodar a aplicação
 
 ### Docker
