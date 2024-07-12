@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Livros App</h1>
+  <nav *ngIf="isAuthenticated()">
+    <a routerLink="/books">Livros</a>
+    <a routerLink="/weather">Veja a previsão do tempo</a>
+    <button (click)="logout()" class="logout-button">Sair</button>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
+
+<footer>
+  © 2024 Livros App.
+</footer>

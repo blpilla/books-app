@@ -1,0 +1,96 @@
+.filter-form {
+  margin-bottom: 20px;
+}
+
+.filter-form input {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filter-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.filter-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Ajustes na lista de livros */
+.books-list-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.books-list-container li {
+  background-color: #f8f9fa;
+  margin: 10px 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.books-list-container li h3 {
+  margin: 0 0 10px;
+  color: #343a40;
+}
+
+.books-list-container li p {
+  margin: 5px 0;
+  color: #6c757d;
+}
+
+.books-list-container li button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+.books-list-container li button:hover {
+  background-color: #0056b3;
+}
+
+.books-list-container li .button-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 5px;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}

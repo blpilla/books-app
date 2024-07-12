@@ -1,0 +1,26 @@
+<div class="book-form-container">
+  <h2>{{ isEditMode ? 'Editar Livro' : 'Adicionar Livro' }}</h2>
+  <form (ngSubmit)="saveBook()">
+    <div>
+      <label for="title">Título</label>
+      <input type="text" id="title" [(ngModel)]="book.title" name="title" required>
+    </div>
+    <div>
+      <label for="author">Autor</label>
+      <input type="text" id="author" [(ngModel)]="book.author" name="author" required>
+    </div>
+    <div>
+      <label for="description">Descrição</label>
+      <textarea id="description" [(ngModel)]="book.description" name="description"></textarea>
+    </div>
+    <div>
+      <label for="number_of_pages">Número de Páginas</label>
+      <input type="number" id="number_of_pages" [(ngModel)]="book.number_of_pages" name="number_of_pages" required>
+    </div>
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+    <button type="submit">{{ isEditMode ? 'Salvar' : 'Adicionar' }}</button>
+  </form>
+  <button (click)="goBack()">Voltar</button>
+</div>

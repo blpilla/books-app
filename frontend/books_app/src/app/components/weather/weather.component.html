@@ -1,0 +1,16 @@
+<div class="weather-container" *ngIf="weather">
+  <h2>Tempo agora</h2>
+  <p><strong>Cidade:</strong> {{ weather.city_name }}</p>
+  <p><strong>Temperatura:</strong> {{ weather.temp }}°C</p>
+  <p><strong>Descrição:</strong> {{ weather.description }}</p>
+  <p><strong>Humidade:</strong> {{ weather.humidity }}%</p>
+  <p><strong>Velocidade do Vento:</strong> {{ weather.wind_speedy }}</p>
+  <p><strong>Nascer do Sol:</strong> {{ weather.sunrise }}</p>
+  <p><strong>Pôr do Sol:</strong> {{ weather.sunset }}</p>
+  <h3>Previsão para os próximos dias:</h3>
+  <ul>
+    <li *ngFor="let forecast of weather.forecast">
+      <p>{{ forecast.weekday }} - {{ forecast.date }}: {{ forecast.description }}, Máx: {{ forecast.max }}°C, Mín: {{ forecast.min }}°C</p>
+    </li>
+  </ul>
+</div>

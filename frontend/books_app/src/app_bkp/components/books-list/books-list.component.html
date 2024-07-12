@@ -1,0 +1,32 @@
+<div class="books-list-container">
+  <h2>Listagem de Livros</h2>
+  <div>
+    <label for="titleFilter">Título:</label>
+    <input type="text" id="titleFilter" [(ngModel)]="titleFilter">
+  </div>
+  <div>
+    <label for="authorFilter">Autor:</label>
+    <input type="text" id="authorFilter" [(ngModel)]="authorFilter">
+  </div>
+  <button (click)="applyFilters()">Aplicar Filtros</button>
+  <div *ngIf="books && books.length; else noBooks">
+    <ul>
+      <li *ngFor="let book of books">
+        <h3>{{ book.title }}</h3>
+        <p>{{ book.description }}</p>
+        <button (click)="viewBook(book.id)">Ver Detalhes</button>
+        <button (click)="editBook(book.id)">Editar</button>
+        <button (click)="deleteBook(book.id)">Deletar</button>
+      </li>
+    </ul>
+    <div class="pagination">
+      <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Anterior</button>
+      <span>Página {{ currentPage }} de {{ totalPages }}</span>
+      <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">Próxima</button>
+    </div>
+  </div>
+  <ng-template #noBooks>
+    <p>Nenhum livro encontrado.</p>
+  </ng-template>
+  <button (click)="addBook()">Adicionar Novo Livro</button>
+</div>
